@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+}
+
+
+body {
+    background-color: rgb(188, 181, 181);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+    border-radius: 20px;
+    background-color: hsla(0, 4%, 9%, 0.214);
+    box-shadow: 1px 1px 20px hsla(0, 0%, 100%, .8);
+    width: 450px;
+    padding: 30px;
+}
+
+
+button {
+    cursor:crosshair;
+    font-size: 28px;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    border-radius: 50%;
+    background-color:rgba(0,0,0,.75);
+    color: white;
+}
+
+.operand {
+    color: orange;
+}
+
+button:hover {
+    background-color: gray;
+    transform: scale(1.15);
+}
+
+
+
+.output {
+    grid-column: 1/ -1;
+    background-color: rgba(0,0,0,.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 10px;
+}
+
+.output > .previous {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output > .current{
+    color: white;
+    font-size: 2.5rem;
+}
